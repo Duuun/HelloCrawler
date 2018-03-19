@@ -3,7 +3,8 @@ class YahoosController < ApplicationController
   require "nokogiri"
 
   def index
-    uri = "https://www.yahoo.co.jp/"
+    uri = "http://www.hatena.ne.jp/hotentry/"
     @doc = Nokogiri::HTML(open(uri), nil, "utf-8")
+    # @doc = Nokogiri::HTML(open(uri), nil, "Shift-jis")
   end
 end
