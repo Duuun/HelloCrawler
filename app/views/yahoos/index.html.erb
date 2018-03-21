@@ -1,5 +1,7 @@
 <% 
-  @doc.css("a").each do |link|
+  @doc.css("th a").each do |link|
+    #concat simple_format(h(link.text))
     concat simple_format(h(link.text))
+    concat simple_format(h(link["href"]))
   end
 %>
